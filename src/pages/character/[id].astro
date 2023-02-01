@@ -1,5 +1,5 @@
 ---
-import Character from "../../components/character.astro";
+import Character from "../../components/character.vue";
 import Mortylayout from "../../layouts/mortylayout.astro";
 
 const {id } = Astro.params;
@@ -8,8 +8,7 @@ const { name, image } = await characterAPIResponse.json();
 ---
 <Mortylayout>
     <div class="details">
-        <h3>{name}</h3>
-        <Character image={image} name={name}></Character>
+        <Character client:visible image={image} name={name}></Character>
     </div>
     
 </Mortylayout>

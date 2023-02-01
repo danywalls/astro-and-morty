@@ -1,6 +1,7 @@
 ---
 import './mortylayout.css'
 import Navigation from "../components/navigation.astro";
+import Footer from "../components/footer.vue";
 ---
 <html lang="en">
   <head>
@@ -23,5 +24,5 @@ import Navigation from "../components/navigation.astro";
       <slot /> 
     </main>
   </body>
-  <footer> 2023</footer>
+  <Footer client:visible message="Using the power of vue"></Footer>
 </html>
