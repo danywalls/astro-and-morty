@@ -14,7 +14,7 @@ footer {
     justify-content: center;
         display: flex;
         gap: 1rem;
-        background: darkcyan;
+        background: black;
         align-content: center;
         align-items: center;
         height: 2rem;
