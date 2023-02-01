@@ -7,5 +7,9 @@ const characterAPIResponse = await fetch(`https://rickandmortyapi.com/api/charac
 const { name, image } = await characterAPIResponse.json();
 ---
 <Mortylayout>
-    <Character image={image} name={name}></Character>
+    <div class="details">
+        <h3>{name}</h3>
+        <Character image={image} name={name}></Character>
+    </div>
+    
 </Mortylayout>
