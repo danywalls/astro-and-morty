@@ -1,15 +1,18 @@
 ---
----
+import Character from "../components/character.astro";
+import Mortylayout from "../layouts/mortylayout.astro";
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+const API_URL = 'https://rickandmortyapi.com/api/character';
+const apiResponse = await fetch(API_URL);
+const charactersData = await apiResponse.json();
+const charactes = charactersData.results;
+---
+<Mortylayout>
+	{
+		charactes.map((char) => (
+			<Character name={char.name} image={char.image}></Character>
+		))
+	}
+</Mortylayout>
+
+		

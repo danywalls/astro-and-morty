@@ -1,0 +1,17 @@
+---
+const navigation = [{
+    title: 'Home',
+    path: '/'
+}, {
+    title: 'About',
+    path: '/about'
+}]
+---
+<nav>
+    
+    {
+        navigation.map((nav) => (
+            <a href={nav.path}>{nav.title}</a>
+        ))
+    }
+  </nav>

@@ -1,0 +1,11 @@
+---
+import Character from "../../components/character.astro";
+import Mortylayout from "../../layouts/mortylayout.astro";
+
+const {id } = Astro.params;
+const characterAPIResponse = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
+const { name, image } = await characterAPIResponse.json();
+---
+<Mortylayout>
+    <Character image={image} name={name}></Character>
+</Mortylayout>
