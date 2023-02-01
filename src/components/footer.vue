@@ -11,6 +11,13 @@ export default {
 </template>
 <style>
 footer {
-    text-align: center;
+    justify-content: center;
+        display: flex;
+        gap: 1rem;
+        background: darkcyan;
+        align-content: center;
+        align-items: center;
+        height: 2rem;
+        color: white;
 }
 </style>

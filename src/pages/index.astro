@@ -1,17 +1,21 @@
 ---
-import Character from "../components/character.astro";
+import Character from "../components/character.vue";
 import Mortylayout from "../layouts/mortylayout.astro";
 
 const API_URL = 'https://rickandmortyapi.com/api/character';
+
 const apiResponse = await fetch(API_URL);
 const charactersData = await apiResponse.json();
 const charactes = charactersData.results;
+
 ---
 <Mortylayout>
 	{
-		charactes.map((char) => (
-			<Character name={char.name} image={char.image}></Character>
-		))
+		charactes.map((char) => 
+		(
+			<Character client:visible id={char.id} name={char.name} image={char.image}></Character>
+		)
+		)
 	}
 </Mortylayout>
 
