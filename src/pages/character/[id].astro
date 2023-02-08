@@ -2,7 +2,7 @@
 import Character from "../../components/Character.jsx";
 import Mortylayout from "../../layouts/mortylayout.astro";
 import Footer from "../../components/footer.vue";
-
+import { DescriptionComponent } from '../../components/description.component.ts'
 const {id } = Astro.params;
 const characterAPIResponse = await fetch(`https://rickandmortyapi.com/api/character/${id}`);
 const { name, image } = await characterAPIResponse.json();
@@ -12,5 +12,6 @@ const { name, image } = await characterAPIResponse.json();
         <Character client:media="max-width:50em"   image={image} name={name}>
             <Footer message="hello from vue"></Footer>
         </Character>
+        <DescriptionComponent title="hi Angular is here!!"></DescriptionComponent>
     </div>
 </Mortylayout>

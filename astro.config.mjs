@@ -10,8 +10,11 @@ import vue from "@astrojs/vue";
 import react from "@astrojs/react";
 
 // https://astro.build/config
+import analogjsangular from "@analogjs/astro-angular";
+
+// https://astro.build/config
 export default defineConfig({
   output: "server",
   adapter: vercel(),
-  integrations: [vue(), react()]
+  integrations: [vue(), react(), analogjsangular()]
 });
