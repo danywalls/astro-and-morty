@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-    <footer>{{ message }}</footer>
+    <footer>{{ message }} on Vue</footer>
 </template>
 <style>
 footer {
