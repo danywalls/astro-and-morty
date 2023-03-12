@@ -1,6 +1,9 @@
 ---
 import Mortylayout from "../layouts/mortylayout.astro";
+import { Image, Picture } from '@astrojs/image/components';
+import edgar from '../assets/edgar.jpg'
 ---
 <Mortylayout>
     <h2>With Love with Astro and Vue</h2>
+    <Image src={edgar} alt="Edgar" format="webp"></Image>
 </Mortylayout>
