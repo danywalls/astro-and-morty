@@ -4,6 +4,6 @@ const { image , name, id} = Astro.props;
 ---
 <div>
     <a href={`/character/${id}`}>
-    <Image src={image} alt={name} aspectRatio="1:1" format="webp" width={300} height={300} />
+    <Image src={image} alt={name} quality={100} aspectRatio="1:1" format="webp" width={300} height={300} />
     </a>
 </div>
