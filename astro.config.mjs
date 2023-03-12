@@ -15,5 +15,7 @@ import image from "@astrojs/image";
 export default defineConfig({
   output: "server",
   adapter: vercel(),
-  integrations: [vue(), react(), image()]
+  integrations: [vue(), react(), image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  })]
 });
