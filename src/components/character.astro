@@ -1,9 +1,18 @@
 ---
-import { Image } from '@astrojs/image/components';
-const { image , name, id} = Astro.props;
+import { Image } from "@astrojs/image/components";
+const { image, name, id } = Astro.props;
 ---
+
 <div>
-    <a href={`/character/${id}`}>
-    <Image src={image} alt={name} quality={100} aspectRatio="1:1" format="webp" width={300} height={300} />
-    </a>
+  <a href={`/character/${id}`}>
+    <Image
+      src={image}
+      alt={name}
+      quality={100}
+      aspectRatio="1:1"
+      format="webp"
+      width={300}
+      height={300}
+    />
+  </a>
 </div>

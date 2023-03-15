@@ -1,39 +1,36 @@
 ---
-const navigation = [{
-    title: 'Home',
-    path: '/'
-}, {
-    title: 'About',
-    path: '/about'
-}]
+const navigation = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "About",
+    path: "/about",
+  },
+];
 ---
+
 <nav>
-    
-    {
-        navigation.map((nav) => (
-            <a href={nav.path}>{nav.title}</a>
-        ))
-    }
-  </nav>
-  <style>
-    nav {
-        justify-content: center;
+  {navigation.map((nav) => <a href={nav.path}>{nav.title}</a>)}
+</nav>
+<style>
+  nav {
+    justify-content: center;
     display: flex;
     gap: 1rem;
     background: black;
     align-content: center;
     align-items: center;
     height: 48px;
-}
-a {
+  }
+  a {
     color: white;
     margin: 8px;
     min-width: 48px;
-}
+  }
 
-a:hover {
-
+  a:hover {
     font-weight: bolder;
-}
-
-  </style>
+  }
+</style>

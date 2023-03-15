@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input } from "@angular/core";
 @Component({
-  selector: 'description',
+  selector: "description",
   standalone: true,
   template: `<div>
     <h1>{{ title }}</h1>
